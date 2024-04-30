@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head></head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MY FIRST WEBSITE</title>
+    <link rel="stylesheet" href="style.css">
+    <script
+      src="https://kit.fontawesome.com/2959c5c41c.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!----------------------- header -------------------->
+    <div id="header">
+      <div class="container">
+        <nav class="navbar">
+          <i class="fa-solid fa-bars nav-icons" onclick="openmenu()"></i>
+          <h3 class="logo"><a href="#header">ARTS AND CRAFTS ADDA</a></h3>
+          <ul id="bars">
+            <li class="space"><a href="#">Home</a></li>
+            <li><a href="#">Arts</a></li>
+            <li><a href="#">Crafts</a></li>
+            <li><a href="#">Drawings</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <!-- <a href=""><i class="fa-solid fa-cart-shopping icons"></i></a>
+            <i href=""><i class="fa-regular fa-user icons"></i>         -->
+            <i class="fa-solid fa-xmark nav-icons" onclick="closemenu()"></i>
+            
+            <!-- <input type="search" placeholder="Search" > -->
+          </ul>
+          <div class="icon">
+            <a href=""><i class="fa-solid fa-cart-shopping icons"></i></a>
+            <i href=""><i class="fa-regular fa-user icons"></i> 
+            <button>Login</button>  
+          </div>
+          
+        </nav> 
+        <div class="home">
+          <div class="left">
+            <h1>Welcome! ❤️</h1>
+            <p>Are you searching for Arts, Crafts and Drawings all together at one place.. 
+            </p>
+            <p class="second-line"><span>Taddaa</span> you are at right place.</p>
+          </div>
+          <div class="right">
+            <img src="images/right_img.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ---------------Arts-------------- -->
+    <div id="arts">
+      <div class="arts">
+        <h1>Arts</h1>
+        <div class="slider-container">
+          <div class="slider">
+              <div class="slide">
+                <img src="images/arts/birds.jpg" alt="Image 1">
+                <div class="overlay">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/arts/bubbles.jpg" alt="Image 2">
+                <div class="overlay">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/arts/couple.jpg" alt="Image 3">
+                <div class="overlay">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/arts/eye.jpg" alt="Image 4">
+                <div class="overlay">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/arts/krish.jpg" alt="Image 5">
+                <div class="overlay">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+              <div class="slide">
+                <img src="images/arts/street.jpg" alt="Image 6">
+                <div class="overlay">
+                  <i class="fa-regular fa-heart"></i>
+                </div>
+              </div>
+          </div>
+          <button class="prev" onclick="prevSlide()">&#10094;</button>
+          <button class="next" onclick="nextSlide()">&#10095;</button>
+      </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,282 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  color: black;
+}
+.container {
+  background: url(images/background.png);
+  background-size: cover;
+  padding: 30px 5%;
+  min-height: 100vh;
+  width: 100%;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.logo a {
+  text-decoration: none;
+  color: black;
+  font-size: 30px;
+}
+nav .space {
+  margin-left: 150px;
+}
+nav ul li {
+  display: inline-block;
+  list-style: none;
+}
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  margin: 20px 20px;
+  position: relative;
+  font-size: 18px;
+}
+nav ul li a::after {
+  content: "";
+  width: 0;
+  height: 3px;
+  background: #f22368;
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  transition: 0.5s;
+  border-radius: 5px;
+}
+nav ul li a:hover::after {
+  width: 100%;
+}
+nav .icons {
+  color: black;
+  margin: 15px;
+}
+
+nav .fa-user {
+  margin-right: -10px;
+}
+.navbar button {
+  margin-left: 15px;
+  padding: 5px 10px;
+  border: 0;
+  background: blue;
+  color: #fff;
+  font-size: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.home {
+  display: flex;
+  margin-top: 130px;
+  font-style: normal;
+}
+.home .left {
+  padding: 40px;
+}
+.home .left h1 {
+  font-size: 40px;
+  color: #145aff;
+}
+.left p {
+  margin-top: 40px;
+  font-size: 18px;
+}
+.left .second-line {
+  margin-top: 15px;
+}
+.left .second-line span {
+  color: #9900ff;
+  font-weight: 700;
+  font-size: 25px;
+  font-style: italic;
+}
+.right {
+  padding-left: 80px;
+  margin-top: -30px;
+}
+#arts {
+  margin: 30px;
+  font-style: normal;
+}
+.arts h1 {
+  font-size: 50px;
+  margin-bottom: 30px;
+}
+.slider-container {
+  /* background: #fff6f6; */
+  height: 300px;
+  position: relative;
+  width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow effect */
+}
+
+.slider {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  margin: 25px -30px;
+  text-align: center;
+  flex: 0 0 33.33%; /* Show three slides at a time */
+}
+
+.slide img {
+  width: 250px;
+  height: 250px;
+  border-radius: 5px;
+}
+.slide img:hover {
+  cursor: pointer;
+  color: #333;
+}
+.overlay {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  opacity: 0;
+  transition: 0.6s;
+}
+.slide:hover .overlay {
+  cursor: pointer;
+  opacity: 1;
+}
+
+/* .overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+.overlay:hover {
+  opacity: 1;
+}
+.overlay i {
+  display: block;
+  margin-bottom: 10px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+} */
+.prev,
+.next {
+  margin: 0 35px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #fff;
+  color: #333;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  cursor: pointer;
+  padding: 10px;
+  height: 45px;
+  width: 45px;
+}
+
+.prev {
+  left: 0;
+}
+
+.next {
+  right: 0;
+}
+
+.navbar .nav-icons {
+  display: none;
+}
+/* @media only screen and (max-width: 900px) {
+  .container {
+    background: url(images/mb_bg_img.png);
+    background-size: cover;
+    background: ;
+  }
+  nav {
+    margin-top: 40px;
+  }
+  .logo a {
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  nav .icon {
+    display: flex;
+  }
+  nav .icon i {
+    font-size: 13px;
+  }
+  nav .fa-cart-shopping {
+    margin-right: -5px;
+  }
+  .navbar .nav-icons {
+    display: block;
+    cursor: pointer;
+  }
+  nav .space {
+    margin-left: 25px;
+  }
+  nav ul {
+    background: #fff;
+    position: fixed;
+    top: 0;
+    right: -200px;
+    width: 200px;
+    height: 100vh;
+    padding-top: 50px;
+    z-index: 2;
+    transition: right 0.5s;
+  }
+  nav ul li {
+    display: block;
+    margin: 25px;
+  }
+  nav ul .fa-solid {
+    position: absolute;
+    top: 25px;
+    left: 25px;
+    cursor: pointer;
+  }
+  .home {
+    flex-direction: column;
+    margin-top: 5px;
+  }
+  .home .left {
+    padding: 20px 0;
+  }
+  .home .left h1 {
+    font-size: 25px;
+  }
+  .home .right img {
+    width: 300px;
+    height: 300px;
+  }
+  .left p {
+    margin-top: 15px;
+    font-size: 14px;
+  }
+  .right {
+    padding-left: 20px;
+    margin-top: 30px;
+  }
+} */
